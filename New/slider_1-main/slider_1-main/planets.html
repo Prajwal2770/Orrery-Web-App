@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PLANETS</title>
+    <link rel="stylesheet" href="planets.css" />
+  </head>
+  <body>
+    <section class="slider-container">
+      <div class="slider-images">
+        <div class="slider-img">
+          <a href="https://science.nasa.gov/mercury/"><img src="Images/mercury-13188.gif" alt="1" /></a>
+          <h1>MERCURY</h1>
+          <div class="details">
+            <h2>MERCURY</h2>
+            <p>THE FIRST PLANET</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <a href="https://science.nasa.gov/venus/"><img src="Images/Venus_Rotation_Movie.gif" alt="2" /></a>
+          <h1>VENUS</h1>
+          <div class="details">
+            <h2>VENUS</h2>
+            <p>THE SECOND PLANET</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <a href="https://science.nasa.gov/earth/"><img src="Images/earth1.gif" alt="3" /></a>
+          <h1>EARTH</h1>
+          <div class="details">
+            <h2>EARTH</h2>
+            <p>THE THIRD PLANET</p>
+          </div>
+        </div>
+        <div class="slider-img active">
+          <a href="https://science.nasa.gov/mars/"><img src="Images/Spinning_Mars.gif" alt="4" /></a>
+          <h1>MARS</h1>
+          <div class="details">
+            <h2>MARS</h2>
+            <p>THE FOURTH PLANET</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <a href="https://science.nasa.gov/jupiter/"><img src="Images/Jupiter_Rotation_Movie_-_Hubble_2015.gif" alt="5" /></a>
+          <h1>JUPITER</h1>
+          <div class="details">
+            <h2>JUPITER</h2>
+            <p>THE FIFTH PLANET</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <a href="https://science.nasa.gov/saturn/"><img src="Images/saturn.gif" alt="6" /></a>
+          <h1>SATURN</h1>
+          <div class="details">
+            <h2>SATURN</h2>
+            <p>THE SIXTH PLANET</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <a href="https://science.nasa.gov/uranus/"><img src="Images/uranus.gif" alt="7" /></a>
+          <h1>URANUS</h1>
+          <div class="details">
+            <h2>URANUS</h2>
+            <p>THE SEVENTH PLANET</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <a href="https://science.nasa.gov/neptune/"><img src="Images/nep.gif" alt="6" /></a>
+            <h1>NEPTUNE</h1>
+            <div class="details">
+              <h2>NEPTUNE</h2>
+              <p>THE EIGHTH PLANET</p>
+            </div>
+          </div>
+      </div>
+    </section>
+    <script src="js/jQuery.js"></script>
+    <script>
+      jQuery(document).ready(function ($) {
+        $(".slider-img").on("click", function () {
+          $(".slider-img").removeClass("active");
+          $(this).addClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>
