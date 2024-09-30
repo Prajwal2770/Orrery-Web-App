@@ -1,3 +1,0 @@
-Download Zip file
-Open it in VScode
-Use Live server and go live in index.html
