@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    overflow: hidden;
+}
+
+.game-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('stars-2643089.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+#spaceship {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: url('rocket-1374247_1920.png');
+    background-size: cover;
+}
+
+#asteroid {
+    position: absolute;
+    top: 0;
+    width: 170px;
+    height: 170px;
+    background-image: url('mug-2511114_1920.png');
+    background-size: cover;
+}
+
+#game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    font-size: 400px;
+    display: none;
+}

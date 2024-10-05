@@ -306,3 +306,55 @@ header a{
         font-size: 30px;
     }
 }
+
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown button (the link in this case) */
+  .dropbtn {
+    background-color: transparent;
+    color: inherit;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 251, 251, 0.2);
+    z-index: 1;
+  }
+  
+  /* Links in the dropdown */
+  .dropdown-content a {
+    color: rgb(129, 192, 115);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #3d11ef;
+  }
+  
+  /* Show the dropdown on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Dropdown hover effect */
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+  
