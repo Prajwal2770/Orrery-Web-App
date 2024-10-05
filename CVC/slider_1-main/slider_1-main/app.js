@@ -47,3 +47,11 @@ function showSlider(type){
         next.click();
     }, timeAutoNext)
 }
+// Optional: Close the dropdown if clicked outside
+window.addEventListener('click', function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        document.querySelectorAll('.dropdown-content').forEach(content => {
+            content.style.display = 'none';
+        });
+    }
+});

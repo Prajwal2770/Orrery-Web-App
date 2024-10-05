@@ -1,0 +1,214 @@
+{
+    "asset": {
+        "version": "2.0",
+        "generator": "Open Asset Import Library (assimp v5.4.0)"
+    },
+    "extensionsUsed": [
+        "KHR_materials_volume",
+        "FB_ngon_encoding"
+    ],
+    "accessors": [
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 31048,
+            "type": "VEC3",
+            "max": [
+                0.9526370167732239,
+                0.8260130286216736,
+                0.8967249989509583
+            ],
+            "min": [
+                -0.951367974281311,
+                -0.8263530135154724,
+                -0.8998939990997314
+            ]
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 31048,
+            "type": "VEC3",
+            "max": [
+                0.9973360300064087,
+                0.9999998807907104,
+                0.9999726414680481
+            ],
+            "min": [
+                -0.9973360300064087,
+                -0.9999998807907104,
+                -0.9989599585533142
+            ]
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 31048,
+            "type": "VEC2",
+            "max": [
+                1.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 169104,
+            "type": "SCALAR",
+            "max": [
+                31047
+            ],
+            "min": [
+                0
+            ]
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 1669952,
+            "uri": "Bennu_0.bin"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 372576,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 372576,
+            "byteLength": 372576,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 745152,
+            "byteLength": 248384,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 993536,
+            "byteLength": 676416,
+            "target": 34963
+        }
+    ],
+    "images": [
+        {
+            "uri": "textures/image_1.png"
+        },
+        {
+            "uri": "textures/image_0.png"
+        },
+        {
+            "uri": "textures/image_2.png"
+        }
+    ],
+    "materials": [
+        {
+            "name": "place_holder",
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 0
+                },
+                "metallicRoughnessTexture": {
+                    "index": 1
+                }
+            },
+            "normalTexture": {
+                "index": 2
+            },
+            "doubleSided": true
+        }
+    ],
+    "meshes": [
+        {
+            "name": "meshes[0]",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 3,
+                    "attributes": {
+                        "POSITION": 0,
+                        "NORMAL": 1,
+                        "TEXCOORD_0": 2
+                    }
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "Bennu",
+            "children": [
+                1
+            ]
+        },
+        {
+            "name": "world",
+            "children": [
+                2
+            ],
+            "extras": {
+                "name": "world"
+            }
+        },
+        {
+            "name": "model",
+            "mesh": 0,
+            "extras": {
+                "units": "meters",
+                "from_gltf_primitive": false,
+                "name": "model",
+                "node": "model"
+            }
+        }
+    ],
+    "samplers": [
+        {
+            "magFilter": 9729,
+            "minFilter": 9987
+        },
+        {
+            "magFilter": 9729,
+            "minFilter": 9987
+        },
+        {
+            "magFilter": 9729,
+            "minFilter": 9987
+        }
+    ],
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "textures": [
+        {
+            "source": 0,
+            "sampler": 0
+        },
+        {
+            "source": 1,
+            "sampler": 1
+        },
+        {
+            "source": 2,
+            "sampler": 2
+        }
+    ],
+    "scene": 0
+}

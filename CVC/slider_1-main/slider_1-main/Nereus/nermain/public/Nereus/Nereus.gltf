@@ -1,0 +1,173 @@
+{
+    "asset": {
+        "version": "2.0",
+        "generator": "Open Asset Import Library (assimp v5.4.0)"
+    },
+    "extensionsUsed": [
+        "KHR_materials_volume",
+        "FB_ngon_encoding"
+    ],
+    "accessors": [
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 29266,
+            "type": "VEC3",
+            "max": [
+                0.997452974319458,
+                0.6576489806175232,
+                0.5898360013961792
+            ],
+            "min": [
+                -0.9993770122528076,
+                -0.6571429967880249,
+                -0.5905050039291382
+            ]
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 29266,
+            "type": "VEC3",
+            "max": [
+                0.9997445940971375,
+                0.9997090697288513,
+                0.9999911785125732
+            ],
+            "min": [
+                -0.9997254014015198,
+                -0.9999966621398926,
+                -0.9999363422393799
+            ]
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 29266,
+            "type": "VEC2",
+            "max": [
+                0.99951171875,
+                0.99951171875
+            ],
+            "min": [
+                0.00043201446533203125,
+                0.09454345703125
+            ]
+        },
+        {
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 154668,
+            "type": "SCALAR",
+            "max": [
+                29265
+            ],
+            "min": [
+                0
+            ]
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 1555184,
+            "uri": "Nereus_0.bin"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 351192,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 351192,
+            "byteLength": 351192,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 702384,
+            "byteLength": 234128,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 936512,
+            "byteLength": 618672,
+            "target": 34963
+        }
+    ],
+    "images": [
+        {
+            "uri": "textures/image_0.png"
+        }
+    ],
+    "materials": [
+        {
+            "name": "Mat_1",
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 0
+                },
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.800000011920929
+            },
+            "doubleSided": true
+        }
+    ],
+    "meshes": [
+        {
+            "name": "meshes[0]",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 3,
+                    "attributes": {
+                        "POSITION": 0,
+                        "NORMAL": 1,
+                        "TEXCOORD_0": 2
+                    }
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "Nereus",
+            "children": [
+                1
+            ]
+        },
+        {
+            "name": "mesh_0",
+            "mesh": 0
+        }
+    ],
+    "samplers": [
+        {
+            "magFilter": 9729,
+            "minFilter": 9987
+        }
+    ],
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "textures": [
+        {
+            "source": 0,
+            "sampler": 0
+        }
+    ],
+    "scene": 0
+}

@@ -1,0 +1,173 @@
+{
+    "asset": {
+        "version": "2.0",
+        "generator": "Open Asset Import Library (assimp v5.4.0)"
+    },
+    "extensionsUsed": [
+        "KHR_materials_volume",
+        "FB_ngon_encoding"
+    ],
+    "accessors": [
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 28488,
+            "type": "VEC3",
+            "max": [
+                0.9584550261497498,
+                0.8666520118713379,
+                0.9951199889183044
+            ],
+            "min": [
+                -0.9566479921340942,
+                -0.8663660287857056,
+                -0.9973229765892029
+            ]
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 28488,
+            "type": "VEC3",
+            "max": [
+                0.9952732920646667,
+                0.9999998807907104,
+                0.9943373203277588
+            ],
+            "min": [
+                -0.9978458881378174,
+                -0.9990900158882141,
+                -0.9958521127700806
+            ]
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 28488,
+            "type": "VEC2",
+            "max": [
+                1.0,
+                1.0
+            ],
+            "min": [
+                0.0001920461654663086,
+                0.2117919921875
+            ]
+        },
+        {
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 163206,
+            "type": "SCALAR",
+            "max": [
+                28487
+            ],
+            "min": [
+                0
+            ]
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 1564440,
+            "uri": "Apophis_0.bin"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 341856,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 341856,
+            "byteLength": 341856,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 683712,
+            "byteLength": 227904,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 911616,
+            "byteLength": 652824,
+            "target": 34963
+        }
+    ],
+    "images": [
+        {
+            "uri": "textures/image_0.png"
+        }
+    ],
+    "materials": [
+        {
+            "name": "Mat_1",
+            "pbrMetallicRoughness": {
+                "baseColorTexture": {
+                    "index": 0
+                },
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.800000011920929
+            },
+            "doubleSided": true
+        }
+    ],
+    "meshes": [
+        {
+            "name": "meshes[0]",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 3,
+                    "attributes": {
+                        "POSITION": 0,
+                        "NORMAL": 1,
+                        "TEXCOORD_0": 2
+                    }
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "Apophis",
+            "children": [
+                1
+            ]
+        },
+        {
+            "name": "mesh_0",
+            "mesh": 0
+        }
+    ],
+    "samplers": [
+        {
+            "magFilter": 9729,
+            "minFilter": 9987
+        }
+    ],
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "textures": [
+        {
+            "source": 0,
+            "sampler": 0
+        }
+    ],
+    "scene": 0
+}
