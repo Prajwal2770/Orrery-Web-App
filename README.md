@@ -8,3 +8,10 @@ Seamlessly move between planets with easy navigation.
 Test your knowledge with fun games and quizzes.
 4.	Immersive Music:
 Enjoy music for a richer experience. Do make sure to have a spotify account to access the space playlist
+
+<h2>NOTE</h2>
+<br>
+<p>Make sure to view this project on your laptop since some pages aren't responsive</p>
+<br>
+<p>Some details about the asteroids aren't added - feel free to explore some interesting comets and asteroids out there in space.</p>
+<br>
