@@ -1,15 +1,22 @@
 const spaceship = document.getElementById("spaceship");
 const gameContainer = document.getElementById("gameContainer");
 const scoreDisplay = document.getElementById("score");
+const timerDisplay = document.getElementById("timer");
+const highscoreDisplay = document.getElementById("highscore"); // Reference to the high score element
 
 let score = 0;
+let highscore = 0; // Initialize high score
+let gameOver = false;
+let alienInterval;
+let gameTimer;
+let timeLeft = 60; // Starting time in seconds
+let countdownInterval; // For the countdown clock
 
 // Move spaceship with mouse
 gameContainer.addEventListener("mousemove", (event) => {
     const containerRect = gameContainer.getBoundingClientRect();
     const mouseX = event.clientX - containerRect.left;
-    
-    // Keep the spaceship within bounds
+
     const spaceshipWidth = 50; // width of the spaceship
     if (mouseX >= 0 && mouseX <= containerRect.width - spaceshipWidth) {
         spaceship.style.left = `${mouseX - spaceshipWidth / 2}px`;
@@ -18,7 +25,9 @@ gameContainer.addEventListener("mousemove", (event) => {
 
 // Shoot bullets with mouse click
 gameContainer.addEventListener("click", () => {
-    shoot();
+    if (!gameOver) {
+        shoot();
+    }
 });
 
 function shoot() {
@@ -48,13 +57,15 @@ function moveBullet(bullet) {
 }
 
 function spawnAliens() {
-    const alien = document.createElement("div");
-    alien.classList.add("alien");
-    const randomPosition = Math.floor(Math.random() * (window.innerWidth - 50));
-    alien.style.left = `${randomPosition}px`;
-    alien.style.top = "0px";
-    gameContainer.appendChild(alien);
-    moveAlien(alien);
+    if (!gameOver) {
+        const alien = document.createElement("div");
+        alien.classList.add("alien");
+        const randomPosition = Math.floor(Math.random() * (window.innerWidth - 50));
+        alien.style.left = `${randomPosition}px`;
+        alien.style.top = "0px";
+        gameContainer.appendChild(alien);
+        moveAlien(alien);
+    }
 }
 
 function moveAlien(alien) {
@@ -85,15 +96,37 @@ function checkCollision(bullet, bulletInterval) {
             alien.remove();
             score++;
             scoreDisplay.innerText = `Score: ${score}`;
+            updateHighScore(); // Update the high score if needed
         }
     });
 }
 
-setInterval(spawnAliens, 1500);
+function updateHighScore() {
+    if (score > highscore) {
+        highscore = score; // Update high score
+        highscoreDisplay.innerText = `High Score: ${highscore}`; // Display new high score
+    }
+}
 
+// Countdown timer function
+function startTimer() {
+    countdownInterval = setInterval(() => {
+        timeLeft--;
+        timerDisplay.innerText = `Time Left: ${timeLeft}`;
+        if (timeLeft <= 0) {
+            clearInterval(countdownInterval);
+            endGame();
+        }
+    }, 1000); // Update the timer every second
+}
 
 function endGame() {
     gameOver = true;
+
+    // Stop spawning aliens
+    clearInterval(alienInterval);
+    clearInterval(countdownInterval);
+
     // Display Game Over message
     const gameOverMessage = document.createElement("div");
     gameOverMessage.innerText = "Game Over! Click to Restart";
@@ -106,7 +139,7 @@ function endGame() {
     gameOverMessage.style.textAlign = "center";
     gameContainer.appendChild(gameOverMessage);
 
-    // Stop spawning aliens and remove any remaining aliens
+    // Remove all remaining aliens
     document.querySelectorAll(".alien").forEach((alien) => alien.remove());
 
     // Restart the game when the user clicks after game over
@@ -120,12 +153,18 @@ function endGame() {
 
 function resetGame() {
     score = 0;
+    timeLeft = 60; // Reset the timer to 60 seconds
     scoreDisplay.innerText = `Score: ${score}`;
+    timerDisplay.innerText = `Time Left: ${timeLeft}`;
     gameOver = false;
 
     // Start spawning aliens again
-    setInterval(spawnAliens, 1500);
+    alienInterval = setInterval(spawnAliens, 1500);
+
+    // Restart the countdown timer
+    startTimer();
 }
 
-// Start spawning aliens at intervals
-setInterval(spawnAliens, 1500);
+// Start the game
+alienInterval = setInterval(spawnAliens, 1500);
+startTimer(); // Start the countdown when the game starts

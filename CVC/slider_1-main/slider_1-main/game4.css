@@ -35,8 +35,21 @@ body {
 
 #score {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    left: 20px;
     font-size: 20px;
 }
 
+#timer {
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Positioning the timer on the right */
+    font-size: 20px;
+}
+
+#highscore {
+    position: absolute;
+    top: 40px; /* Positioned below the timer */
+    right: 10px; /* Align with the timer */
+    font-size: 20px;
+}
