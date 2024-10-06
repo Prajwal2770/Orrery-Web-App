@@ -31,23 +31,27 @@ gameContainer.addEventListener("click", () => {
 });
 
 function shoot() {
-    const bullet = document.createElement("div");
+    const bullet = document.createElement("img");
+    bullet.src = "bullet.png"; // Your bullet image source
     bullet.classList.add("bullet");
     bullet.style.position = "absolute";
     bullet.style.left = `${parseInt(getComputedStyle(spaceship).left) + 20}px`;
     bullet.style.bottom = "70px";
-    bullet.style.width = "10px";
-    bullet.style.height = "20px";
-    bullet.style.background = "red";
+
+    // Set the size directly here
+    bullet.style.width = "10px";  // Adjust width
+    bullet.style.height = "20px";  // Adjust height
+
     gameContainer.appendChild(bullet);
     moveBullet(bullet);
 }
+
 
 function moveBullet(bullet) {
     const interval = setInterval(() => {
         const bottom = parseInt(getComputedStyle(bullet).bottom);
         if (bottom < window.innerHeight) {
-            bullet.style.bottom = `${bottom + 5}px`;
+            bullet.style.bottom = `${bottom + 8}px`;
             checkCollision(bullet, interval);
         } else {
             clearInterval(interval);

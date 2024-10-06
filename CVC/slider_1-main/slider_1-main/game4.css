@@ -53,3 +53,9 @@ body {
     right: 10px; /* Align with the timer */
     font-size: 20px;
 }
+.bullet {
+    position: absolute;
+    width: 20px; /* Set the desired width */
+    height: 35px; /* Set the desired height */
+}
+
