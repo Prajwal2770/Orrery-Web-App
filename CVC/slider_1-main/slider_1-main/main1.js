@@ -47,7 +47,7 @@ spotLight.castShadow = true;
 spotLight.shadow.bias = -0.0001;
 scene.add(spotLight);
 
-const loader = new GLTFLoader().setPath('public/Apophis/');
+const loader = new GLTFLoader().setPath('public1/Apophis/');
 loader.load('Apophis.gltf', (gltf) => {
   console.log('loading model');
   const mesh = gltf.Apophis;

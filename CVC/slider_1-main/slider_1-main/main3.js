@@ -47,7 +47,7 @@ spotLight.castShadow = true;
 spotLight.shadow.bias = -0.0001;
 scene.add(spotLight);
 
-const loader = new GLTFLoader().setPath('public/Florence/');
+const loader = new GLTFLoader().setPath('public3/Florence/');
 loader.load('Florence.gltf', (gltf) => {
   console.log('loading model');
   const mesh = gltf.Florence;

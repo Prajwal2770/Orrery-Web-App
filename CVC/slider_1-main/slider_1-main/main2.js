@@ -47,7 +47,7 @@ spotLight.castShadow = true;
 spotLight.shadow.bias = -0.0001;
 scene.add(spotLight);
 
-const loader = new GLTFLoader().setPath('public/Bennu/');
+const loader = new GLTFLoader().setPath('public2/Bennu/');
 loader.load('Bennu.gltf', (gltf) => {
   console.log('loading model');
   const mesh = gltf.Bennu;
