@@ -129,13 +129,13 @@ function endGame() {
 
     // Display Game Over message
     const gameOverMessage = document.createElement("div");
-    gameOverMessage.innerText = "Game Over! Click to Restart";
+    gameOverMessage.innerText = "Game Over! \n Click to Restart";
     gameOverMessage.style.position = "absolute";
     gameOverMessage.style.top = "50%";
     gameOverMessage.style.left = "50%";
     gameOverMessage.style.transform = "translate(-50%, -50%)";
-    gameOverMessage.style.fontSize = "30px";
-    gameOverMessage.style.color = "white";
+    gameOverMessage.style.fontSize = "100px";
+    gameOverMessage.style.color = "red";
     gameOverMessage.style.textAlign = "center";
     gameContainer.appendChild(gameOverMessage);
 
