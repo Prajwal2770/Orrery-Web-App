@@ -37,7 +37,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: red;
-    font-size: 200px;
+    font-size: 300px;
     display: none;
 }
 .asteroid {
