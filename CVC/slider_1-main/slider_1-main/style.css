@@ -11,7 +11,7 @@ a{
 }
 header{
     width: 1140px;
-    max-width: 80%;
+    max-width: 100%;
     margin: auto;
     height: 50px;
     display: flex;
@@ -392,3 +392,6 @@ header a{
     background-color: #3e8e41;
   }
   
+  
+
+

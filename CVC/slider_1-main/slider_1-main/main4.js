@@ -50,7 +50,7 @@ scene.add(spotLight);
 const loader = new GLTFLoader().setPath('public4/Nereus/');
 loader.load('Nereus.gltf', (gltf) => {
   console.log('loading model');
-  const mesh = gltf.Nereus;
+  const mesh = gltf.scene;
 
   mesh.traverse((child) => {
     if (child.isMesh) {

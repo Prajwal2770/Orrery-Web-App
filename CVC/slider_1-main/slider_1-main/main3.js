@@ -50,7 +50,7 @@ scene.add(spotLight);
 const loader = new GLTFLoader().setPath('public3/Florence/');
 loader.load('Florence.gltf', (gltf) => {
   console.log('loading model');
-  const mesh = gltf.Florence;
+  const mesh = gltf.scene;
 
   mesh.traverse((child) => {
     if (child.isMesh) {

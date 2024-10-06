@@ -50,7 +50,7 @@ scene.add(spotLight);
 const loader = new GLTFLoader().setPath('public1/Apophis/');
 loader.load('Apophis.gltf', (gltf) => {
   console.log('loading model');
-  const mesh = gltf.Apophis;
+  const mesh = gltf.scene;
 
   mesh.traverse((child) => {
     if (child.isMesh) {
