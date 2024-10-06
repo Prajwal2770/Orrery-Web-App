@@ -383,15 +383,5 @@ header a{
   .dropdown-content a:hover {
     background-color: #3d11ef;
   }
-  /* Show the dropdown on hover */
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  /* Dropdown hover effect */
-  .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-  }
-  
-  
 
 

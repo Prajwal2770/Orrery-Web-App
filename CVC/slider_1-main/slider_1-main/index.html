@@ -164,6 +164,29 @@
         Your browser does not support the audio element.
     </audio>
     <script src="app.js"></script>
+    <script>
+            document.addEventListener('DOMContentLoaded', function () {
+        // Select all dropdown buttons
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        dropdowns.forEach(dropdown => {
+            const button = dropdown.querySelector('.dropbtn');
+            const content = dropdown.querySelector('.dropdown-content');
+
+            button.addEventListener('click', function () {
+                // Toggle the display of the dropdown content
+                content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+            });
+
+            // Optionally hide dropdown content if clicking outside
+            document.addEventListener('click', function (event) {
+                if (!dropdown.contains(event.target)) {
+                    content.style.display = 'none';
+                }
+            });
+        });
+    });
+    </script>
     
     
 </body>
