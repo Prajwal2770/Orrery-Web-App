@@ -57,47 +57,17 @@ function spawnAliens() {
     moveAlien(alien);
 }
 
-// Define a game over function
-function gameOver() {
-    alert("Game Over! Your score was: " + score);
-    // Optionally reset the game state here
-    // Clear all aliens and bullets
-    const aliens = document.querySelectorAll(".alien");
-    aliens.forEach((alien) => alien.remove());
-    const bullets = document.querySelectorAll(".bullet");
-    bullets.forEach((bullet) => bullet.remove());
-    
-    // Reset score
-    score = 0;
-    scoreDisplay.innerText = `Score: ${score}`;
-}
-
-// Modify the moveAlien function
 function moveAlien(alien) {
     const interval = setInterval(() => {
         const top = parseInt(getComputedStyle(alien).top);
-        const containerBottom = gameContainer.getBoundingClientRect().bottom; // Get the bottom position of the game container
-        const alienBottom = alien.getBoundingClientRect().bottom; // Get the bottom position of the alien
-
-        if (alienBottom < containerBottom) {
-            alien.style.top = `${top + 3.5}px`; // Adjust speed as needed
+        if (top < window.innerHeight) {
+            alien.style.top = `${top + 4.5}px`;
         } else {
             clearInterval(interval);
             alien.remove();
-            gameOver(); // Call game over if the alien reaches the bottom
         }
     }, 100);
 }
-    const interval = setInterval(() => {
-        const top = parseInt(getComputedStyle(alien).top);
-        if (top < window.innerHeight) {
-            alien.style.top = `${top + 3.5}px`;
-        } else {
-            clearInterval(interval);
-            alien.remove();
-        }
-    }, 100);
-
 
 function checkCollision(bullet, bulletInterval) {
     const aliens = document.querySelectorAll(".alien");
@@ -119,4 +89,43 @@ function checkCollision(bullet, bulletInterval) {
     });
 }
 
+setInterval(spawnAliens, 1500);
+
+
+function endGame() {
+    gameOver = true;
+    // Display Game Over message
+    const gameOverMessage = document.createElement("div");
+    gameOverMessage.innerText = "Game Over! Click to Restart";
+    gameOverMessage.style.position = "absolute";
+    gameOverMessage.style.top = "50%";
+    gameOverMessage.style.left = "50%";
+    gameOverMessage.style.transform = "translate(-50%, -50%)";
+    gameOverMessage.style.fontSize = "30px";
+    gameOverMessage.style.color = "white";
+    gameOverMessage.style.textAlign = "center";
+    gameContainer.appendChild(gameOverMessage);
+
+    // Stop spawning aliens and remove any remaining aliens
+    document.querySelectorAll(".alien").forEach((alien) => alien.remove());
+
+    // Restart the game when the user clicks after game over
+    gameContainer.addEventListener("click", () => {
+        if (gameOver) {
+            resetGame();
+            gameOverMessage.remove();
+        }
+    });
+}
+
+function resetGame() {
+    score = 0;
+    scoreDisplay.innerText = `Score: ${score}`;
+    gameOver = false;
+
+    // Start spawning aliens again
+    setInterval(spawnAliens, 1500);
+}
+
+// Start spawning aliens at intervals
 setInterval(spawnAliens, 1500);

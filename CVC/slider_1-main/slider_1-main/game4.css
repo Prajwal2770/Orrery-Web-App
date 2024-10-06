@@ -5,8 +5,7 @@
 }
 
 body {
-    background: black;
-    background-image:url('starbg.jpg');
+    background-image: url('starbg.jpg');
     color: white;
     font-family: 'Arial', sans-serif;
 }
@@ -22,16 +21,16 @@ body {
     position: absolute;
     bottom: 20px;
     left: calc(50% - 25px);
-    width: 50px;
-    height: 50px;
+    width: 120px;
+    height: 120px;
     background: url('rocket-1374247_1920.png') no-repeat center center/contain;
 }
 
 .alien {
     position: absolute;
-    width: 50px;
-    height: 50px;
-    background: url('ufo.png') no-repeat center center/contain;
+    width: 100px;
+    height: 100px;
+    background: url('enemy.png') no-repeat center center/contain;
 }
 
 #score {
@@ -40,3 +39,4 @@ body {
     left: 10px;
     font-size: 20px;
 }
+
