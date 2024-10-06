@@ -6,6 +6,25 @@ let tiles = [];
 const size = 4; // 4x4 puzzle
 const totalTiles = size * size;
 
+// Image paths for the tiles (1 to 15)
+const images = [
+    'imagesp/image1.jpg',
+    'imagesp/image2.jpg',
+    'imagesp/image3.jpg',
+    'imagesp/image4.jpg',
+    'imagesp/image5.jpg',
+    'imagesp/image6.jpg',
+    'imagesp/image7.jpg',
+    'imagesp/image8.jpg',
+    'imagesp/image9.jpg',
+    'imagesp/image10.jpg',
+    'imagesp/image11.jpg',
+    'imagesp/image12.jpg',
+    'imagesp/image13.jpg',
+    'imagesp/image14.jpg',
+    'imagesp/image15.jpg'
+];
+
 function initTiles() {
     tiles = [];
     for (let i = 0; i < totalTiles; i++) {
@@ -18,14 +37,17 @@ function drawPuzzle() {
     tiles.forEach((tile, index) => {
         const piece = document.createElement('div');
         piece.classList.add('puzzle-piece');
-        if (tile !== 0) {
+
+        if (tile !== 0) { // Skip the empty tile (0)
             const img = document.createElement('img');
-            img.src = `3d-view-sun-space.jpg`; // Random space image
+            // Assign image based on tile number (offset by -1 because arrays are 0-indexed)
+            img.src = images[tile - 1];
             piece.appendChild(img);
             piece.addEventListener('click', () => moveTile(index));
         } else {
             piece.style.background = 'transparent'; // Empty tile
         }
+
         puzzleContainer.appendChild(piece);
     });
 }
